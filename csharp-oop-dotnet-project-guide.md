@@ -10,8 +10,11 @@ This project is meant to help you practice:
 
 - Classes and objects
 - Properties and constructors
-- Encapsulation
-- Inheritance
+- OO Concepts
+  - Encapsulation
+  - Inheritance
+  - ~~Abstraction~~
+  - ~~Polymorphism~~
 - Interfaces
 - Lists and collections
 - Basic console input/output
@@ -444,15 +447,6 @@ You can create files manually in VS Code or run:
 
 ```bash
 touch Book.cs Library.cs LibraryItem.cs ICheckoutable.cs
-```
-
-On Windows PowerShell:
-
-```powershell
-New-Item Book.cs
-New-Item Library.cs
-New-Item LibraryItem.cs
-New-Item ICheckoutable.cs
 ```
 
 ---
