@@ -8,7 +8,8 @@ while (true)
     Console.WriteLine("2. View books");
     Console.WriteLine("3. Check out book");
     Console.WriteLine("4. Return book");
-    Console.WriteLine("5. Exit");
+    Console.WriteLine("5. Delete book");
+    Console.WriteLine("6. Exit");
     Console.Write("Choose an option: ");
 
     string? choice = Console.ReadLine();
@@ -69,6 +70,26 @@ while (true)
     }
     else if (choice == "5")
     {
+        Console.Write("Enter title: ");
+        string? title = Console.ReadLine();
+
+        Book? book = library.FindBookByTitle(title ?? "");
+
+        if (book == null)
+        {
+            Console.WriteLine("Book not found.");
+        }
+        else if(book.IsCheckedOut == true){
+            Console.WriteLine("Cannot delete books that is checked out.");
+        }
+        else
+        {
+            // Deleting book should be a method in the library class and not the book class. 
+            // You cannot tell a book to delete itself 
+            library.DeleteBook(book);
+        }
+    }
+    else if (choice == "6"){
         break;
     }
     else

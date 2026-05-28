@@ -13,6 +13,11 @@ public class Library
         _books.Add(book);
     }
 
+    public void DeleteBook(Book book){
+        _books.Remove(book);
+        Console.WriteLine($"{book.Title} has been deleted.");
+    }
+
     public void DisplayBooks()
     {
         if (_books.Count == 0)
