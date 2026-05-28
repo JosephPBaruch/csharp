@@ -4,17 +4,25 @@ while (true)
 {
     Console.WriteLine();
     Console.WriteLine("Library Manager");
+    Console.WriteLine("0. Exit");
+    Console.WriteLine("====== Books ======");
     Console.WriteLine("1. Add book");
     Console.WriteLine("2. View books");
     Console.WriteLine("3. Check out book");
     Console.WriteLine("4. Return book");
     Console.WriteLine("5. Delete book");
-    Console.WriteLine("6. Exit");
+    Console.WriteLine("====== Magazines ======");
+    Console.WriteLine("6. Add Magazine");
+    Console.WriteLine("7. View Magainzes");
+    Console.WriteLine("8. Check out Magazine");
     Console.Write("Choose an option: ");
 
     string? choice = Console.ReadLine();
 
-    if (choice == "1")
+    if (choice == "0"){
+        break;
+    }
+    else if (choice == "1")
     {
         Console.Write("Title: ");
         string? title = Console.ReadLine();
@@ -90,7 +98,44 @@ while (true)
         }
     }
     else if (choice == "6"){
-        break;
+        Console.Write("Title: ");
+        string? title = Console.ReadLine();
+
+        Console.Write("Author: ");
+        string? author = Console.ReadLine();
+
+        Console.Write("Company: ");
+        string? company = Console.ReadLine();
+
+        if (!string.IsNullOrWhiteSpace(title) && !string.IsNullOrWhiteSpace(author) && !string.IsNullOrWhiteSpace(company))
+        {
+            library.AddMagazine(new Magazine(title, author, company));
+            Console.WriteLine("Magazine added.");
+        }
+        else
+        {
+            Console.WriteLine("Title, author, and company are required.");
+        }
+    }
+    else if (choice == "7")
+    {
+        library.DisplayMagazines();
+    }
+    else if (choice == "8")
+    {
+        Console.Write("Enter title: ");
+        string? title = Console.ReadLine();
+
+        Book? magazine = library.FindMagazineByTitle(title ?? "");
+
+        if (magazine == null)
+        {
+            Console.WriteLine("Magazine not found.");
+        }
+        else
+        {
+            magazine.CheckOut();
+        }
     }
     else
     {

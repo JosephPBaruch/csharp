@@ -9,7 +9,7 @@
 
 ### Medium
 
-- [ ] Add a `Magazine` class
+- [x] Add a `Magazine` class -=> REDUCED SCOPE DUE TO DUPLICATING KNOWN CONCEPTS
 - [ ] ~~Add a `DVD` class~~ -=> REMOVED BECAUSE SAME AS PREVIOUS
 - [ ] Make `Library` store `List<LibraryItem>` instead of `List<Book>`
 - [ ] Use polymorphism to call `DisplayInfo` on different item types
