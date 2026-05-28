@@ -2,7 +2,7 @@
 
 ## Easy
 
-- [ ] Prevent duplicate book titles
+- [x] Prevent duplicate book titles
 - [ ] Add a menu option to delete a book
 - [ ] Add a menu option to list only available books
 - [ ] Add a menu option to list only checked-out books
