@@ -4,6 +4,12 @@ public class Library
 
     public void AddBook(Book book)
     {
+        foreach (Book existingBook in _books){
+            if(existingBook.Title == book.Title){
+                Console.Write("Cannot add duplicate books");
+                return;
+            }
+        }
         _books.Add(book);
     }
 
