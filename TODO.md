@@ -1,5 +1,26 @@
 # TODO
 
+## Leetcode
+- [ ] 3908. Valid Digit Number
+```csharp
+        int mod = 1;
+
+        bool found = false;
+
+        while( n >= mod ){
+            mod *= 10;
+            
+            int remainder = n % mod;
+            n /= mod;
+
+            if(remainder == x){
+                found = true;
+            }
+        }
+
+        return found && n != x;
+```
+
 ## Easy
 
 - [x] Prevent duplicate book titles

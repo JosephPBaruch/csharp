@@ -370,7 +370,7 @@ public interface ICheckoutable
 }
 ```
 
-A class can implement an interface:
+A class can implement an interfacef:
 
 ```csharp
 public class Book : LibraryItem, ICheckoutable

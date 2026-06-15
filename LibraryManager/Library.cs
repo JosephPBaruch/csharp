@@ -3,6 +3,30 @@ public class Library
     private List<Book> _books = new List<Book>();
     private List<Magazine> _magazines = new List<Magazine>();
 
+    // private List<LibraryItem> _items = new List<LibraryItem>();
+
+    private string saveFile;
+
+    public Library(string SAVE_FILE)
+    {
+        saveFile = SAVE_FILE;
+    }
+
+    public void UpdateFileStore()
+    {
+        // take _books and _magazines and save to file
+
+        File f = new File(saveFile);
+
+        // books = _books.toJSON();
+
+        // magazines = _magazines.toJSON();
+
+        // file = books + magaines
+
+        // f.write(file);
+    }
+
     public void AddBook(Book book)
     {
         foreach (Book existingBook in _books){

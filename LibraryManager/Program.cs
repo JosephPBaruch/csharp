@@ -1,4 +1,4 @@
-﻿Library library = new Library();
+﻿Library library = new Library("/Users/joseph.baruch/Desktop/csharp/LibraryManager/save.json");
 
 while (true)
 {
@@ -141,4 +141,6 @@ while (true)
     {
         Console.WriteLine("Invalid option.");
     }
+
+    library.UpdateFileStore();
 }
