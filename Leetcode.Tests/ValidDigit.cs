@@ -1,39 +1,20 @@
-using Leetcode;
-
+// Run: dotnet test --filter "FullyQualifiedName=Leetcode.Tests.ValidDigitTestsLoop.ValidDigit_ReturnsExpected"
 namespace Leetcode.Tests;
 
-public class ValidDigitTests
+public class ValidDigitTestsLoop
 {
-    [Fact]
-    public void Test1()
+    public static IEnumerable<object[]> Cases => new[]
+    {
+        new object[] { 101, 0, true },
+        new object[] { 232, 2, false },
+        new object[] { 5, 1, false }
+    };
+
+    [Theory]
+    [MemberData(nameof(Cases))]
+    public void ValidDigit_ReturnsExpected(int number, int digit, bool expected)
     {
         var s = new Solution();
-
-        bool answer = s.ValidDigit(101, 0);
-
-        Assert.Equal(answer, true);
-
-    }
-
-    [Fact]
-    public void Test2()
-    {
-        var s = new Solution();
-
-        bool answer = s.ValidDigit(232, 2);
-
-        Assert.Equal(answer, false);
-
-    }
-
-    [Fact]
-    public void Test3()
-    {
-        var s = new Solution();
-
-        bool answer = s.ValidDigit(5, 1);
-
-        Assert.Equal(answer, false);
-
+        Assert.Equal(expected, s.ValidDigit(number, digit));
     }
 }
