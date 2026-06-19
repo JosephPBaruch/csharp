@@ -6,7 +6,8 @@ public class MaxContainersTestsLoop
     public static IEnumerable<object[]> Cases => new[]
     {
         new object[] { 2, 3, 15, 4 },
-        // new object[] { 3, 5, 20, 4 },
+        new object[] { 3, 5, 20, 4 },
+        new object[] { 1, 20, 5, 0 },
     };
 
     [Theory]
