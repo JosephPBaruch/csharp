@@ -37,5 +37,6 @@ public class MaxContainersClass {
         // 1. Making sure that all of the values are checked for their bounds? (Can't be negative but type checking are done by default in the language)
         // 2.  Make sure that the container weight doesn't exceed the maxWeight of the ship... should this return 0 or -1;
             // Thinking about this, there could be a ship that is 1 x 1 has a max weight less than the requested container weight. Thoughts -=> I like the idea of returning 0 in this case. Lets add a test case 
+        //  Also need to watch out for overflowing when making computations
     }
 }
